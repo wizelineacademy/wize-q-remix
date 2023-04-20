@@ -14,6 +14,7 @@ import {
 import listDepartments from 'app/controllers/departments/list';
 import createQuestion from 'app/controllers/questions/create';
 import Notifications from 'app/components/Notifications';
+import AnswerBotButton from 'app/components/Atoms/AnswerBotButton';
 
 export const loader = async ({ request }) => {
   await requireAuth(request);
@@ -122,6 +123,7 @@ function CreateQuestion() {
               }
             </Styled.Recommendations>
           </Styled.RecommendationsContainer>
+          <AnswerBotButton/>
         </Styled.QuestionRecommendations>
       </Styled.QuestionDiv>
     </>
